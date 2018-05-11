@@ -54,7 +54,7 @@ if (!isset($error_message)) {
     //Use an address in your own domain as the from address, put the submitter's address in a reply-to
     $mail->setFrom($email, $name);
     $mail->addReplyTo($email, $name);
-    $mail->addAddress($email, 'Laura Mignolet');
+    $mail->addAddress("valerie.pappaert@gmail.com", 'Valerie Pappaert');
     $mail->Subject = 'Contact formulier ingevuld door ' . $name;
     $mail->Body = $email_body;
     if ($mail->send()) {
@@ -69,7 +69,7 @@ if (!isset($error_message)) {
 <!DOCTYPE html>
 <html>
 <body>
-  
+
   <?php
     if(isset($error_message)) {?>
       <br/><br/><p class="text-base align-center message_error"><?php echo $error_message;
